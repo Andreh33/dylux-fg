@@ -1,0 +1,344 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   MONTARAZ · Tokens de marca
+   Paleta primaria: Verde campaña (10 tonos)
+   Paleta secundaria cálida: Latón cartucho (8 tonos)
+   ========================================================================= */
+
+@theme {
+  /* ---- Verde campaña (primario) ---------------------------------------- */
+  --color-verde-1: #0b0f08;
+  --color-verde-2: #101610;
+  --color-verde-3: #161c12;
+  --color-verde-4: #1f2a1a;
+  --color-verde-5: #2e3d26;
+  --color-verde-6: #465938;
+  --color-verde-7: #697b4b;
+  --color-verde-8: #8e9d67;
+  --color-verde-9: #b6bf8e;
+  --color-verde-10: #d6d8b5;
+
+  /* ---- Latón cartucho (secundario cálido) ------------------------------ */
+  --color-laton-1: #1b130a;
+  --color-laton-2: #3a2a14;
+  --color-laton-3: #5c4220;
+  --color-laton-4: #7c5a1e;
+  --color-laton-5: #b6822e;
+  --color-laton-6: #c9a35a;
+  --color-laton-7: #e0c58d;
+  --color-laton-8: #efe0bc;
+
+  /* ---- Aguas (verde-pizarra) ------------------------------------------- */
+  --color-agua-1: #08130e;
+  --color-agua-2: #0f2218;
+  --color-agua-3: #1a3325;
+  --color-agua-4: #2a4a36;
+  --color-agua-5: #557664;
+  --color-agua-6: #9cb8a7;
+  --color-agua-7: #dce6e0;
+
+  /* ---- Sendas ---------------------------------------------------------- */
+  --color-senda-1: #161613;
+  --color-senda-2: #2e2e26;
+  --color-senda-3: #4f5043;
+  --color-senda-4: #7b7b65;
+  --color-senda-5: #afae91;
+  --color-senda-6: #d8d5bb;
+
+  /* ---- Acentos funcionales --------------------------------------------- */
+  --color-vermellon: #9c2e22;
+  --color-mostaza: #b68b2f;
+  --color-musgo: #5b7a3c;
+  --color-cobalto: #27437a;
+  --color-terracota: #a6543a;
+
+  /* ---- Maestre --------------------------------------------------------- */
+  --color-maestre-1: #5c4220;
+  --color-maestre-2: #8e6826;
+  --color-maestre-3: #b6822e;
+  --color-maestre-4: #d9b26a;
+  --color-maestre-5: #f0d89b;
+
+  /* ---- Tipografía ------------------------------------------------------ */
+  --font-sectra: "GT Sectra Fallback", "Source Serif Pro", "Georgia", "Times New Roman", serif;
+  --font-sohne: "Inter Fallback", "Inter", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", "Cascadia Code", "Menlo", monospace;
+  --font-script: "Caveat", "Bradley Hand", cursive;
+
+  /* ---- Easings personalizados (Bezier de marca) ----------------------- */
+  --ease-monte-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-monte-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-monte-inout: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-pendulum: cubic-bezier(0.45, 0, 0.55, 1);
+  --ease-wind: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-tide: cubic-bezier(0.55, 0, 0.1, 1);
+  --ease-shutter: cubic-bezier(0.85, 0, 0.15, 1);
+
+  /* ---- Radios (esquinas duras, no abusar) ----------------------------- */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+/* =========================================================================
+   Variables semánticas (cambian con el tema)
+   ========================================================================= */
+
+:root {
+  /* Modo oscuro = default global */
+  --bg: var(--color-verde-3);
+  --bg-raised: var(--color-verde-4);
+  --bg-high: var(--color-verde-5);
+  --fg: var(--color-laton-8);
+  --fg-muted: var(--color-laton-7);
+  --fg-dim: var(--color-verde-9);
+  --border: var(--color-verde-6);
+  --border-fine: rgba(214, 216, 181, 0.12);
+  --accent: var(--color-laton-5);
+  --accent-hover: var(--color-laton-6);
+  --link: var(--color-laton-6);
+  --success: var(--color-musgo);
+  --warning: var(--color-mostaza);
+  --danger: var(--color-vermellon);
+  --info: var(--color-cobalto);
+
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: var(--color-laton-8);
+  --bg-raised: #f6ebc9;
+  --bg-high: #fbf3d8;
+  --fg: var(--color-verde-2);
+  --fg-muted: var(--color-verde-5);
+  --fg-dim: var(--color-verde-6);
+  --border: #d8c58a;
+  --border-fine: rgba(46, 61, 38, 0.18);
+  --accent: var(--color-laton-5);
+  --accent-hover: var(--color-laton-4);
+  --link: var(--color-cobalto);
+
+  color-scheme: light;
+}
+
+[data-theme="tarde"] {
+  --bg: #0a0907;
+  --bg-raised: #110c09;
+  --bg-high: #1a120d;
+  --fg: #ffcfa8;
+  --fg-muted: #e5b58e;
+  --fg-dim: #a37a55;
+  --border: #2a1810;
+  --border-fine: rgba(255, 75, 46, 0.18);
+  --accent: #ff4b2e;
+  --accent-hover: #ff6a50;
+  --link: #ff4b2e;
+
+  color-scheme: dark;
+}
+
+/* =========================================================================
+   Reset + base
+   ========================================================================= */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sohne);
+  font-feature-settings: "ss01", "tnum", "kern";
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: auto;
+  /* Lenis controla el scroll suave */
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--color-verde-1);
+}
+
+/* Focus visible — anillo punteado mostaza, 2 px, offset 2 px */
+:focus-visible {
+  outline: 2px dashed var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* =========================================================================
+   Tipografía utilitaria
+   ========================================================================= */
+
+.font-display {
+  font-family: var(--font-sectra);
+  font-feature-settings: "ss01", "dlig";
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "tnum", "calt";
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.eyebrow {
+  font-family: var(--font-sohne);
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* =========================================================================
+   Grano de película (capa global, sutil)
+   ========================================================================= */
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/></svg>");
+  opacity: 0.045;
+  mix-blend-mode: overlay;
+}
+
+/* =========================================================================
+   Niebla parallax (fondo decorativo)
+   ========================================================================= */
+
+.fog-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% 60%,
+    rgba(143, 157, 103, 0.08),
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+}
+
+/* =========================================================================
+   Topografía de fondo (líneas finas decorativas tipo IGN)
+   ========================================================================= */
+
+.topo-bg {
+  background-image:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(105, 123, 75, 0.05),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(182, 130, 46, 0.04),
+      transparent 50%
+    );
+}
+
+/* =========================================================================
+   Sello de cera (utility para CTAs y badges)
+   ========================================================================= */
+
+.wax-seal {
+  background: radial-gradient(
+    ellipse at 30% 30%,
+    var(--color-vermellon),
+    color-mix(in oklab, var(--color-vermellon) 80%, black)
+  );
+  color: var(--color-laton-8);
+  border-radius: 50%;
+  box-shadow:
+    inset 0 -3px 6px rgba(0, 0, 0, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================================================
+   Marquesina infinita (footer)
+   ========================================================================= */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+}
+
+/* =========================================================================
+   Reading progress bar
+   ========================================================================= */
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background-color: var(--accent);
+  z-index: 100;
+  transform-origin: left;
+}
+
+/* =========================================================================
+   Reduce motion: respeto absoluto
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.2s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =========================================================================
+   Print
+   ========================================================================= */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+}

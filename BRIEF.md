@@ -391,114 +391,214 @@ Se documenta a mano el kerning para palabras frecuentes: "MONTARAZ", "AGUAS", "M
 
 ---
 
-## 6. SISTEMA DE COLOR
+## 6. SISTEMA DE COLOR — VERDE CAMPAÑA (revisión)
 
 ### 6.1. Filosofía
-"Colores que existen en el campo a las 7 de la mañana". Nada de saturaciones HSL puras. Todo color tiene **temperatura**, **textura** y **humedad** implícitas.
+"Colores que existen en el campo a las 7 de la mañana, vistos por alguien con uniforme verde." Una **paleta militar mate**: verde campaña, verde oliva, verde caqui, verde liquen, verde junco y verde lino. Sobre ella, un único acento cálido — **latón cartucho** — que evoca las vainas que pesan en el bolsillo. **Cero saturación HSL pura. Cero verdes neón. Cero "Slack purple".**
 
-### 6.2. Paleta primaria
-- `--monte-1` `#0F0E0C` — *Sombra de roble* (negro tinta de boj).
-- `--monte-2` `#1A1714` — *Granza* (negro pardo).
-- `--monte-3` `#2A211A` — *Tabaco mojado*.
-- `--monte-4` `#3D2A1A` — *Castaño asado*.
-- `--monte-5` `#6C4C2C` — *Cuero curtido*.
-- `--monte-6` `#9C7A4A` — *Latón sucio*.
-- `--monte-7` `#C9A86A` — *Cartucho*.
-- `--monte-8` `#E6D5B0` — *Pergamino*.
+### 6.2. Paleta primaria — verde campaña (10 tonos)
+> Toda la marca se construye sobre esta escala. Como una libreta de mil hojas, donde cada tono es una hora del día.
 
-### 6.3. Paleta de aguas
-- `--agua-1` `#0A1416` — *Charca nocturna*.
-- `--agua-2` `#10242A` — *Pizarra mojada*.
-- `--agua-3` `#1F3A45` — *Verde-río*.
-- `--agua-4` `#2E5260` — *Estuario*.
-- `--agua-5` `#5A8290` — *Niebla marina*.
-- `--agua-6` `#A6C0C6` — *Espuma cantábrica*.
-- `--agua-7` `#DEE9EC` — *Hielo grisáceo*.
+- `--verde-1` `#0B0F08` — *Noche en el monte* (casi negro, base UI dark).
+- `--verde-2` `#101610` — *Sombra de pino*.
+- `--verde-3` `#161C12` — *Loden profundo* (fondo modo oscuro).
+- `--verde-4` `#1F2A1A` — *Verde campaña* (uniforme reglamentario español).
+- `--verde-5` `#2E3D26` — *Verde oliva mate* (color marca principal).
+- `--verde-6` `#465938` — *Verde olivar de Jaén*.
+- `--verde-7` `#697B4B` — *Verde caqui* (chaqueta de monte).
+- `--verde-8` `#8E9D67` — *Verde liquen* (estado disponible).
+- `--verde-9` `#B6BF8E` — *Verde junco*.
+- `--verde-10` `#D6D8B5` — *Verde lino crudo* (acabado/línea fina).
 
-### 6.4. Paleta de sendas
-- `--senda-1` `#1B1A17` — *Pizarra*.
-- `--senda-2` `#3A352D` — *Piedra húmeda*.
-- `--senda-3` `#5C5346` — *Liquen seco*.
-- `--senda-4` `#857A65` — *Heno*.
-- `--senda-5` `#B6AB91` — *Avena*.
-- `--senda-6` `#DCD3BC` — *Lana cruda*.
+### 6.3. Paleta cálida complementaria — latón cartucho (8 tonos)
+> El acento. Cobre y latón viejos. Se usa con moderación: CTAs primarios, sellos, insignia Maestre, números de serie.
 
-### 6.5. Acentos (sólo para señalización, nunca como fondo)
-- `--vermellon` `#9C2E22` — sello rojo, alarma, oferta limitada.
-- `--mostaza` `#B68B2F` — etiqueta serie limitada.
-- `--musgo` `#3B5A2C` — disponible, ok.
-- `--cobalto` `#1F3A75` — link, navegación primaria en modo claro.
-- `--coral-niebla` `#C56B5A` — solo para Magazine y dataviz.
+- `--laton-1` `#1B130A` — *Pavón profundo* (texto sobre claro).
+- `--laton-2` `#3A2A14` — *Castaño asado*.
+- `--laton-3` `#5C4220` — *Cuero curtido*.
+- `--laton-4` `#7C5A1E` — *Latón oxidado* (hover de CTAs).
+- `--laton-5` `#B6822E` — **Latón cartucho** (acento principal).
+- `--laton-6` `#C9A35A` — *Latón pulido* (hover sobre oscuro).
+- `--laton-7` `#E0C58D` — *Latón claro*.
+- `--laton-8` `#EFE0BC` — *Sand cream* (highlights).
 
-### 6.6. Sistema dorado/Maestre
-- `--dorado-1` `#8A6A1F` — base mate.
-- `--dorado-2` `#B69140` — hover.
-- `--dorado-3` `#D9B66A` — destello (rara vez, para Club Maestre).
+### 6.4. Paleta de aguas (revisada hacia el verde)
+> Cuando navegues por la submarca *Montaraz Aguas*, los azules se mueven hacia un verde-pizarra coherente con el conjunto.
 
-### 6.7. Estados funcionales
+- `--agua-1` `#08130E` — *Charca nocturna*.
+- `--agua-2` `#0F2218` — *Verde-pizarra profundo*.
+- `--agua-3` `#1A3325` — *Río truchero*.
+- `--agua-4` `#2A4A36` — *Estuario al alba*.
+- `--agua-5` `#557664` — *Niebla del Sella*.
+- `--agua-6` `#9CB8A7` — *Espuma cantábrica*.
+- `--agua-7` `#DCE6E0` — *Hielo grisáceo*.
+
+### 6.5. Paleta de sendas
+- `--senda-1` `#161613` — *Pizarra*.
+- `--senda-2` `#2E2E26` — *Piedra húmeda*.
+- `--senda-3` `#4F5043` — *Liquen seco*.
+- `--senda-4` `#7B7B65` — *Heno*.
+- `--senda-5` `#AFAE91` — *Avena*.
+- `--senda-6` `#D8D5BB` — *Lana cruda*.
+
+### 6.6. Acentos funcionales (uso parsimonioso)
+> Solo señalización. Nunca como fondo de bloque. Nunca dos acentos en el mismo módulo.
+
+- `--vermellon` `#9C2E22` — sello rojo, alarma, edición numerada.
+- `--mostaza` `#B68B2F` — etiqueta serie limitada (variante del latón).
+- `--musgo` `#5B7A3C` — disponible, ok (verde funcional vivo).
+- `--cobalto` `#27437A` — link, info, navegación primaria sobre claro.
+- `--terracota` `#A6543A` — solo Magazine y dataviz, sustituye al coral-niebla.
+
+### 6.7. Sistema Club Maestre (dorado)
+- `--maestre-1` `#5C4220` — base mate (sello).
+- `--maestre-2` `#8E6826` — medio.
+- `--maestre-3` `#B6822E` — primario (= `--laton-5`, coherente).
+- `--maestre-4` `#D9B26A` — hover sobre oscuro.
+- `--maestre-5` `#F0D89B` — destello (raro, solo nivel Maestre).
+
+### 6.8. Estados funcionales
 - Éxito: `--musgo`.
 - Error: `--vermellon`.
 - Atención: `--mostaza`.
 - Info: `--cobalto`.
 
-### 6.8. Modo claro
-- Fondo base: `#F5EFE2` *(pergamino)*.
-- Texto: `--monte-1`.
-- Bordes: `#E1D6BD`.
+### 6.9. Modo oscuro (default global)
+- **Fondo base**: `--verde-3` `#161C12` (no negro puro; verde casi imperceptible).
+- **Fondo elevado**: `--verde-4` `#1F2A1A` (cards, drawers).
+- **Fondo alto-elevación**: `--verde-5` `#2E3D26` (modals).
+- **Texto primario**: `--laton-8` `#EFE0BC`.
+- **Texto secundario**: `--laton-7` `#E0C58D`.
+- **Texto terciario / atenuado**: `--verde-9` `#B6BF8E`.
+- **Bordes**: `--verde-6` `#465938`.
+- **Bordes finos divisorios**: `rgba(214, 216, 181, 0.12)`.
 
-### 6.9. Modo oscuro (por defecto)
-- Fondo base: `--monte-1`.
-- Texto: `#E6D5B0`.
-- Bordes: `#3D2A1A`.
+### 6.10. Modo claro (pergamino + verde)
+- **Fondo base**: `--laton-8` `#EFE0BC` (papel kraft envejecido).
+- **Fondo elevado**: `#F6EBC9` (papel marfil).
+- **Texto primario**: `--verde-2` `#101610`.
+- **Texto secundario**: `--verde-5` `#2E3D26`.
+- **Bordes**: `#D8C58A`.
+- **Acento**: `--laton-5` para CTAs, `--cobalto` para enlaces editoriales.
 
-### 6.10. Modo Tarde de Campo (terciario)
-- Fondo: `#100A06`.
-- Texto: `#C9A86A`.
-- Acentos: rojo `#FF4B2E` en lugar de azul (para preservar visión nocturna y respetar a quien navega en el coche antes de salir al puesto). Inspirado en linternas frontales con filtro rojo.
-- Activado por horario (entre 22:00 y 06:00 hora del navegador) o por toggle manual con icono de linterna.
+### 6.11. Modo "Tarde de Campo" (UX nocturno)
+- Fondo: `#0A0907`.
+- Texto: `#FFCFA8`.
+- Acentos: rojo `#FF4B2E` (linterna roja con filtro, preserva visión nocturna).
+- Activado por horario (22:00–06:00 hora navegador) o toggle manual con icono de linterna.
 
-### 6.11. Color tokens (formato CSS-vars y JSON)
+### 6.12. CSS Tokens (oficial — copiar tal cual a `globals.css`)
 ```css
 :root {
-  --color-monte-1: #0F0E0C;
-  --color-monte-2: #1A1714;
-  --color-monte-3: #2A211A;
-  --color-monte-4: #3D2A1A;
-  --color-monte-5: #6C4C2C;
-  --color-monte-6: #9C7A4A;
-  --color-monte-7: #C9A86A;
-  --color-monte-8: #E6D5B0;
-  --color-agua-1: #0A1416;
-  --color-agua-2: #10242A;
-  --color-agua-3: #1F3A45;
-  --color-agua-4: #2E5260;
-  --color-agua-5: #5A8290;
-  --color-agua-6: #A6C0C6;
-  --color-agua-7: #DEE9EC;
-  --color-senda-1: #1B1A17;
-  --color-senda-2: #3A352D;
-  --color-senda-3: #5C5346;
-  --color-senda-4: #857A65;
-  --color-senda-5: #B6AB91;
-  --color-senda-6: #DCD3BC;
+  /* Verde campaña — primario */
+  --color-verde-1: #0B0F08;
+  --color-verde-2: #101610;
+  --color-verde-3: #161C12;
+  --color-verde-4: #1F2A1A;
+  --color-verde-5: #2E3D26;
+  --color-verde-6: #465938;
+  --color-verde-7: #697B4B;
+  --color-verde-8: #8E9D67;
+  --color-verde-9: #B6BF8E;
+  --color-verde-10: #D6D8B5;
+
+  /* Latón cartucho — secundario cálido */
+  --color-laton-1: #1B130A;
+  --color-laton-2: #3A2A14;
+  --color-laton-3: #5C4220;
+  --color-laton-4: #7C5A1E;
+  --color-laton-5: #B6822E;
+  --color-laton-6: #C9A35A;
+  --color-laton-7: #E0C58D;
+  --color-laton-8: #EFE0BC;
+
+  /* Aguas (verde-pizarra) */
+  --color-agua-1: #08130E;
+  --color-agua-2: #0F2218;
+  --color-agua-3: #1A3325;
+  --color-agua-4: #2A4A36;
+  --color-agua-5: #557664;
+  --color-agua-6: #9CB8A7;
+  --color-agua-7: #DCE6E0;
+
+  /* Sendas */
+  --color-senda-1: #161613;
+  --color-senda-2: #2E2E26;
+  --color-senda-3: #4F5043;
+  --color-senda-4: #7B7B65;
+  --color-senda-5: #AFAE91;
+  --color-senda-6: #D8D5BB;
+
+  /* Acentos funcionales */
   --color-vermellon: #9C2E22;
-  --color-mostaza: #B68B2F;
-  --color-musgo: #3B5A2C;
-  --color-cobalto: #1F3A75;
-  --color-coral-niebla: #C56B5A;
-  --color-dorado-1: #8A6A1F;
-  --color-dorado-2: #B69140;
-  --color-dorado-3: #D9B66A;
+  --color-mostaza:   #B68B2F;
+  --color-musgo:     #5B7A3C;
+  --color-cobalto:   #27437A;
+  --color-terracota: #A6543A;
+
+  /* Maestre */
+  --color-maestre-1: #5C4220;
+  --color-maestre-2: #8E6826;
+  --color-maestre-3: #B6822E;
+  --color-maestre-4: #D9B26A;
+  --color-maestre-5: #F0D89B;
+
+  /* Semánticos (dark default) */
+  --bg:        var(--color-verde-3);
+  --bg-raised: var(--color-verde-4);
+  --bg-high:   var(--color-verde-5);
+  --fg:        var(--color-laton-8);
+  --fg-muted:  var(--color-laton-7);
+  --fg-dim:    var(--color-verde-9);
+  --border:    var(--color-verde-6);
+  --accent:    var(--color-laton-5);
+  --accent-hover: var(--color-laton-6);
+  --link:      var(--color-laton-6);
+  --success:   var(--color-musgo);
+  --warning:   var(--color-mostaza);
+  --danger:    var(--color-vermellon);
+  --info:      var(--color-cobalto);
+}
+
+[data-theme="light"] {
+  --bg:        var(--color-laton-8);
+  --bg-raised: #F6EBC9;
+  --bg-high:   #FBF3D8;
+  --fg:        var(--color-verde-2);
+  --fg-muted:  var(--color-verde-5);
+  --fg-dim:    var(--color-verde-6);
+  --border:    #D8C58A;
+  --accent:    var(--color-laton-5);
+  --accent-hover: var(--color-laton-4);
+  --link:      var(--color-cobalto);
+}
+
+[data-theme="tarde"] {
+  --bg:        #0A0907;
+  --bg-raised: #110C09;
+  --bg-high:   #1A120D;
+  --fg:        #FFCFA8;
+  --fg-muted:  #E5B58E;
+  --fg-dim:    #A37A55;
+  --border:    #2A1810;
+  --accent:    #FF4B2E;
+  --accent-hover: #FF6A50;
+  --link:      #FF4B2E;
 }
 ```
 
-### 6.12. Reglas de combinación
-- **Combinación canónica de Monte**: `--monte-1` + `--monte-7` + `--mostaza` + `--monte-4` (linewidth + bordes).
-- **Combinación canónica de Aguas**: `--agua-1` + `--agua-6` + `--cobalto`.
-- **Combinación canónica de Cocina**: `--monte-1` + `#7C1F1F` + `--monte-7`.
-- **Nunca**: dos acentos en el mismo módulo.
-- **Nunca**: gradientes de un acento a otro.
-- **Nunca**: colores web 1.0 (`#FF0000`, `#00FF00`, `#0000FF`).
+### 6.13. Reglas de combinación
+- **Combinación canónica global**: `--verde-3` (fondo) + `--laton-8` (texto) + `--laton-5` (acento) + `--verde-6` (línea fina).
+- **Combinación Monte (caza)**: `--verde-2` + `--laton-7` + `--laton-5` + `--maestre-3` (sellos).
+- **Combinación Aguas (pesca)**: `--agua-2` + `--agua-7` + `--laton-5` (acento contra) + `--cobalto` (links).
+- **Combinación Sendas (montaña)**: `--senda-2` + `--senda-6` + `--musgo` + `--laton-5`.
+- **Combinación Cocina**: `--verde-2` + `#7C1F1F` (sangre seca) + `--laton-7`.
+- **Combinación editorial Magazine**: `--laton-8` (fondo claro) + `--verde-2` (texto) + `--terracota` (decorativo).
+- **Combinación Maestre**: `--verde-2` + `--maestre-3` + `--maestre-5` (destello sutil).
+- **Nunca**: dos acentos cromáticos en el mismo módulo.
+- **Nunca**: gradientes entre acentos.
+- **Nunca**: verdes neón (`#00FF00` y similares).
+- **Nunca**: dos elementos saturados juntos sin tono terroso de por medio.
 
 ### 6.13. Filtros de imagen sistemáticos
 Toda imagen pasa por una capa con `filter: contrast(1.02) saturate(0.92) brightness(0.98)` para forzar paleta cohesiva. Las imágenes "frías" (aguas) reciben un ligero overlay azul-pizarra al 6 %.
