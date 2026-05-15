@@ -5,7 +5,9 @@ import { FeaturedDrop } from "@/components/scene/featured-drop";
 import { Manifesto } from "@/components/scene/manifesto";
 import { AtlasPreview } from "@/components/scene/atlas-preview";
 import { CuradorMes } from "@/components/scene/curador-mes";
+import { ConfiguradorPreview } from "@/components/scene/configurador-preview";
 import { LunaMareas } from "@/components/scene/luna-mareas";
+import { Voces } from "@/components/scene/voces";
 import { Avituallamiento } from "@/components/scene/avituallamiento";
 
 export default function Home() {
@@ -18,7 +20,9 @@ export default function Home() {
       <Manifesto />
       <AtlasPreview />
       <CuradorMes />
+      <ConfiguradorPreview />
       <LunaMareas />
+      <Voces />
       <Avituallamiento />
     </>
   );

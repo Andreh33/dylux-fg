@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { findProduct, productos } from "@/lib/products";
 import { formatPrice } from "@/lib/utils";
+import { PdpActions } from "@/components/pdp-actions";
 
 type Params = { slug: string };
 
@@ -137,28 +138,7 @@ export default async function ProductoPage({
             </div>
 
             {/* CTAs */}
-            <div className="mt-10 space-y-3">
-              <button
-                type="button"
-                className="flex w-full items-center justify-center gap-3 rounded-md bg-[color:var(--accent)] px-6 py-4 text-sm font-medium text-[color:var(--color-verde-1)] transition-colors hover:bg-[color:var(--accent-hover)]"
-              >
-                Añadir al morral
-              </button>
-              <div className="grid grid-cols-2 gap-3">
-                <button
-                  type="button"
-                  className="rounded-md border border-[color:var(--border)] px-4 py-3 text-sm text-[color:var(--fg)] transition-colors hover:border-[color:var(--accent)]"
-                >
-                  Apartar 24 h
-                </button>
-                <button
-                  type="button"
-                  className="rounded-md border border-[color:var(--border)] px-4 py-3 text-sm text-[color:var(--fg)] transition-colors hover:border-[color:var(--accent)]"
-                >
-                  Guardar en cuaderno
-                </button>
-              </div>
-            </div>
+            <PdpActions producto={producto} />
 
             {/* "Por qué lo elegimos" */}
             <section className="mt-12 rounded-md border-l-2 border-[color:var(--accent)] bg-[color:var(--bg-raised)] p-6">

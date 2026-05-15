@@ -5,6 +5,12 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { LenisProvider } from "@/components/lenis-provider";
 import { Cursor } from "@/components/cursor";
+import { Providers } from "@/components/providers";
+import { ReadingProgress } from "@/components/reading-progress";
+import { CookieBanner } from "@/components/cookie-banner";
+import { CommandMenu } from "@/components/command-menu";
+import { MorralDrawer } from "@/components/morral-drawer";
+import { EasterEggLayer } from "@/components/easter-egg-layer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://montaraz.com"),
@@ -77,15 +83,23 @@ export default function RootLayout({
           Ir a contenido principal
         </a>
 
-        <LenisProvider />
-        <Cursor />
-        <Header />
+        <Providers>
+          <LenisProvider />
+          <Cursor />
+          <ReadingProgress />
+          <Header />
 
-        <main id="main" className="pt-0">
-          {children}
-        </main>
+          <main id="main" className="pt-0">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
+
+          <MorralDrawer />
+          <CommandMenu />
+          <CookieBanner />
+          <EasterEggLayer />
+        </Providers>
       </body>
     </html>
   );
